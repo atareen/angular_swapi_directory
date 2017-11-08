@@ -1,6 +1,4 @@
-# lsh_angularjs_tutorial
-LSH: AngularJS tutorial
+Note: Make sure to start your server by allows cors headers 
+For static results, please check the results folder.
+Credit: This repo is based on original work by: (http://blog.aashni.me/2016/08/angularjs-an-introduction/)
 
-These codes are part of an introduction to AngularJS tutorial by [Aashni Shah](http://www.aashni.me).
-
-You can access the complete tutorial [here](http://blog.aashni.me/2016/08/angularjs-an-introduction/)# angular_swapi_directory
