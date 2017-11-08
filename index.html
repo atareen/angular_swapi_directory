@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="EmersonAngularApp">
+<head>
+  <title>Star Wars: Galactic Directory</title>
+  
+  <!-- favicon -->
+  <link rel="shortcut icon" href="emersonlogo.gif" type="image/gif">
+   
+ <!-- styles -->
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" type="text/css" href="hover.css">
+ 
+ <style>
+ 	table
+	{
+	border-collapse: collapse;
+	font-family: Arial;
+	}
+	
+	td
+	{
+	border: 1px solid black;
+	padding: 5px;	
+	}
+	
+	th
+	{
+	border: 1px solid black;
+	padding: 5px;
+	text-align: left;
+	}
+
+ </style>
+ 
+  <!-- AngualrJS files -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.min.js"></script>
+ 
+  <!-- Scripts -->
+  <script type="text/javascript" src="app.js"></script>
+ 
+  <!-- Controllers -->
+  <script type="text/javascript" src="controllers/main.js"></script>
+  <script type="text/javascript" src="controllers/character.js"></script>
+  <script type="text/javascript" src="controllers/movie.js"></script>
+  <script type="text/javascript" src="controllers/specie.js"></script>
+  <script type="text/javascript" src="controllers/planet.js"></script>
+
+  <!-- Services: the following is needed to connect to sw api -->
+  <script type="text/javascript" src="services/swapi.js"></script>
+
+  <!-- Bootstrap things for style -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+ 
+  <div ng-view></div>
+  
+  <!-- creating likes/dislikes, rows to display -->
+<!--
+  <div ng-controller="MainCtrl"/>  
+  <table>
+  	<thead>
+  		<tr>
+  			<th><font color="white">Name</font></th>
+  			<th><font color="white">Likes </font></th>
+  			<th><font color="white">Dislikes </font></th>
+  			<th><font color="white">Like/Dislike</font></th>
+  		</tr>
+  	</thead>
+  		<tbody>
+  			<tr ng-repeat="emerson in emersons | limitTo:rowLimit">
+  			<td> <font color="white">{{emerson.name}} </font></td>
+  			<td><font color="white"> {{emerson.likes}}  </font></td>
+ 			<td> <font color="white">{{emerson.dislikes}} </font> </td>
+ 			<td>
+ 				<input type="button" value="Like" ng-click="incrementLikes(emerson)">
+ 				<input type="button" value="Dislike" ng-click="incrementDislikes(emerson)">
+ 			</td>
+  			</tr>
+  		</tbody>
+  </table>
+  </br></br>
+  Rows to display: <input type="number" step="1" min="0" max="5" ng-model="rowLimit" />
+  </div>
+-->
+  
+  <!-- two way data binding, model updates view, view updates model -->
+<!--
+  <div ng-controller="MainCtrl"/>
+  	<input type="txt" ng-model="message" />
+  	</br></br>
+  	 {{message}}
+  	</div>
+  	-->
+</body>
+</html>

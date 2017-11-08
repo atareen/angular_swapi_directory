@@ -1,0 +1,67 @@
+ <head>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ 
+ <style>
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq8JJCHdudXqlOCFTxC9PyElL_HPgQTcnLN5s0Q-fuUsokRhSliQ");
+    background-size:cover
+}
+</style>
+ 
+ <style>
+table, th, td {
+    border: 5px solid black;
+    border-collapse: collapse;
+    overflow: hidden;
+    width:300px;
+}
+</style>
+ </head>
+
+<audio autoplay>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="col-md-10 col-md-offset-1" ng-if="loading">
+  <div class="page-header">
+    <h1>Loading...</h1>
+  </div>
+</div>
+ 
+<div class="col-md-10 col-md-offset-1" ng-if="!loading">
+
+  <div ng-if="movie.title">
+	
+	 </br> </br>  </br> </br>  </br> </br>  </br> </br>
+ 
+ <table>
+ 	<tr><td><font size=5>Episode {{ id }}: {{ movie.title }}</font></td></tr> 
+ 	<tr><td><font size=5>Name: {{ movie.title }}</font></td></tr>
+ 	<tr><td><font size=5>Director: {{ movie.director }}</font></td></tr>
+ 	<tr><td><font size=5>Producer: {{ movie.producer }}</font></td></tr>
+ 	<tr><td><font size=5>Release Date: {{ movie.release_date }}</font></td></tr>
+ 	
+ </table>
+ 
+  </div>
+ </br> </br>  </br> </br>  </br> </br>  </br> </br>
+  	 	<div id="titles"><div id="titlecontent">
+        <p>
+          {{ movie.opening_crawl }}
+        </p>
+      </div>
+    </div>
+  
+	</div></div>
+
+ 
+  <div ng-if="!movie.title">
+ 
+    <div class="page-header">
+      <h1>There is no Episode {{ id }} yet :(</h1>
+    </div>
+ 
+    <a href="#/">Return Home?</a>
+ 
+  </div>
+</div>

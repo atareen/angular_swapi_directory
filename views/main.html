@@ -1,0 +1,98 @@
+<head>
+<style>
+body{
+    background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/09/star-wars-wallpaper-4.jpg");
+    background-size:cover
+}
+</style>
+
+<style>
+#grad1 {
+    background: silver; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, silver); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, silver); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, silver); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, silver); /* Standard syntax (must be last) */
+}
+</style>
+</head>
+
+<div class="col-md-10 col-md-offset-1">
+ 
+  <div class="page-header">
+	<center>  	
+	  <div>
+      			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2000px-Star_Wars_Logo.svg.png" width="500" height="250"/>
+ 		</div>
+ 	</center>
+	<!-- <img ng-src=  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/2000px-Star_Wars_Logo.svg.png" width="954" height="575"/>-->
+    <center><h1 class="star-wars">A Galactic Directory! </h1></center>
+    <h2> <font color="white">Species: </font></h2>
+    <div class="panel panel-default panel-modest hvr-bounce-in" ng-repeat="specie in specieData">
+    <div class="panel-heading">
+    <a href="#/specie/{{ specie.name }}" class="hvr-bounce-in"><font size="3" color="#ffa500">{{ specie.name }}</font></a>
+    </div>
+    </div>
+    <h2> <font color="white">Planets: </font></h2>
+    <div class="panel panel-default panel-modest hvr-bounce-in" ng-repeat="planet in planetData">
+    <div class="panel-heading">
+    <a href="#/planet/{{ planet.name }}" class="hvr-bounce-in"><font size="3" color="#ffa500">{{ planet.name }}</font></a>
+    </div>
+    </div>
+  </div>
+ 
+<!-- <div class="panel panel-default" ng-repeat="person in data"> -->
+<div class="panel panel-default panel-modest" ng-repeat="person in data">
+    <div class="panel-heading">
+      <!-- <a href="#/character/{{ person.name }}">{{ person.name }}</a> -->
+      <center>
+      <a href="#/character/{{ person.name }}" class="hvr-pulse-grow"><font size="5" color="#ffa500">{{ person.name | uppercase}}</font></a>
+		</center>      
+    </div>
+    
+    <div class="panel">
+    <div class="panel-body hvr-fade panel-height">
+    <!-- loop which populates list of movies per person-->
+      <!-- <div class="btn-group" ng-repeat="film in person.films"> -->
+	<!--    <ol class="hvr-pulse-grow" > -->
+	<!-- <ol class="hvr-fade"> -->
+	<ol class="wrapper">
+      <div ng-repeat="film in person.films">
+      	<li>
+        	<!--<a href="#/movie/{{ films[film].episode_id }}"><button class="btn btn-primary">{{ films[film].title }}</button></a>-->
+			<!--        	class="hvr-back-pulse"-->
+			<a href="#/movie/{{ films[film].episode_id }}" class="hvr-pulse-grow">
+				<button class="btn" id="grad1"><font size="2" color="black">{{ films[film].title | uppercase}}</font></button>
+			</a>
+        </li>
+
+      </div>
+	</ol>
+    </div>
+    </div>
+  </div>
+ 
+</div>
+
+
+
+ <!--
+ <table>
+ <div ng-repeat="specie in specieData">
+ 	<tr><td><font size=5>
+ 		<a href="#/specie/{{ specie.name }}" class="hvr-pulse-grow"><font size="5" color="#ffa500">{{ specie.name }}</font></a>
+ 	</font></td></tr> 	
+ </table>
+-->
+<!--
+<ol class="wrapper">
+<div ng-repeat="specie in specieData">
+	<li>
+    <div>
+      <a href="#/specie/{{ specie.name }}" class="hvr-pulse-grow"><font size="5" color="#ffa500">{{ specie.name }}</font></a>
+    </div>
+    </li>
+</div>
+</ol>
+
+-->

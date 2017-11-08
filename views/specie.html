@@ -1,0 +1,61 @@
+ <head>
+ <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+body{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq8JJCHdudXqlOCFTxC9PyElL_HPgQTcnLN5s0Q-fuUsokRhSliQ");
+    background-size:cover
+}
+</style>
+ </head>
+<div class="col-md-10 col-md-offset-1" ng-if="loading">
+  <div class="page-header">
+    <h1>Loading...</h1>
+  </div>
+</div>
+
+ 
+<div class="col-md-10 col-md-offset-1" ng-if="!loading">
+  <div ng-if="specie.name">
+ 
+    <div class="page-header">
+     <center> 
+     <h1>Name: {{ specie.name }}</h1>
+     
+    </center> 
+    </div>
+ 	
+ 	<center>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Name: {{ specie.name }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Classification: {{ specie.classification }}
+      </div>
+    </div>
+     <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Skin Colors: {{ specie.skin_colors }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Average Life Span: {{ specie.average_lifespan }}
+      </div>
+    </div>
+
+ 	 	</center>
+  <p><a href="#/">Go Back</a><p>
+ 
+  <div ng-if="!specie.name">
+ 
+    <div class="page-header">
+      <h1>No one by the name {{ id }} exists :(</h1>
+    </div>
+ 
+    <a href="#/">Return Home?</a>
+ 
+  </div>
+</div>

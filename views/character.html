@@ -1,0 +1,139 @@
+ <head>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+<div class="col-md-10 col-md-offset-1" ng-if="loading">
+  <div class="page-header">
+    <h1>Loading...</h1>
+  </div>
+</div>
+
+ 
+<div class="col-md-10 col-md-offset-1" ng-if="!loading">
+  <div ng-if="character.name">
+ 
+    <div class="page-header">
+     <center> 
+     <h1 class="star-wars">{{ character.name }}</h1>
+     
+    	<div ng-if="character.name == 'Luke Skywalker'">
+			<div>
+      			<img ng-src="https://vignette1.wikia.nocookie.net/starwars/images/d/d9/Luke-rotjpromo.jpg/revision/latest/scale-to-width-down/350?cb=20091030151422"/>
+    		</div>
+    	</div>
+    	
+    	<div ng-if="character.name == 'C-3PO'">
+			<div>
+      			<img ng-src="http://img2.wikia.nocookie.net/__cb20071204231632/uncyclopedia/images/5/56/3po.jpg"/>
+    		</div>
+    	</div>
+    	
+    	<div ng-if="character.name == 'R2-D2'">
+			<div>
+      			<img ng-src="https://images-na.ssl-images-amazon.com/images/I/41IXITCtVwL._SY450_.jpg"/>
+    		</div>
+    	</div>
+    	
+    	<div ng-if="character.name == 'Darth Vader'">
+			<div>
+      			<img ng-src="http://static.srcdn.com/wp-content/uploads/Star-Wars-Darth-Vader-Wallpaper.jpg" width="900" height="500"/>
+    		</div>
+    	</div>
+    	
+    	<div ng-if="character.name == 'Leia Organa'">
+			<div>
+      			<img ng-src="https://yt3.ggpht.com/-aAY0aoLqlKg/AAAAAAAAAAI/AAAAAAAAAAA/mhW_EHtv1hU/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" width="500" height="500"/>
+    		</div>
+    	</div>
+     
+    	<div ng-if="character.name == 'Owen Lars'">
+			<div>
+      			<img ng-src="http://vignette1.wikia.nocookie.net/starwars/images/9/91/OwenLarsHS-SWE.jpg/revision/latest?cb=20120428164235"/>
+    		</div>
+    	</div>		     
+
+    	<div ng-if="character.name == 'Beru Whitesun lars'">
+			<div>
+      			<img ng-src="http://www.jeditemplearchives.com/galleries/2015/Review_BeruWhitesunTLC/Review_BeruWhitesunTLC_stillA.jpg"/>
+    		</div>
+    	</div>		     
+
+    	<div ng-if="character.name == 'R5-D4'">
+			<div>
+      			<img ng-src="https://vignette2.wikia.nocookie.net/starwars/images/2/2c/R5d4.jpg/revision/latest?cb=20080404200713"/>
+    		</div>
+    	</div>
+    	
+    	<div ng-if="character.name == 'Biggs Darklighter'">
+			<div>
+      			<img ng-src="https://lumiere-a.akamaihd.net/v1/images/image_606ff7f7.jpeg?region=0%2C0%2C1560%2C878&amp;width=768"/>
+    		</div>
+    	</div>			    
+
+    	<div ng-if="character.name == 'Obi-Wan Kenobi'">
+			<div>
+      			<img ng-src="http://hiddenremote.com/files/2017/01/star-wars-obi-wan-kenobi-movie.jpg" width="800" height="400"/>
+    		</div>
+    	</div>			    
+    	
+    	 
+
+     
+    </center> 
+    </div>
+ 	
+ 	<center>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Name: {{ character.name }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Mass: {{ character.mass }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Height: {{ character.height }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Mass: {{ character.mass }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Hair Color: {{ character.hair_color }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Eye Color: {{ character.eye_color }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Birth Year: {{ character.birth_year }}
+      </div>
+    </div>
+    <div class="panel panel-default panel-modest">
+      <div class="panel-body">
+        Gender: {{ character.gender }}
+      </div>
+    </div>
+ 
+  </div>
+ 	 	</center>
+  <p><a href="#/">Go Back</a><p>
+ 
+  <div ng-if="!character.name">
+ 
+    <div class="page-header">
+      <h1>No one by the name {{ id }} exists :(</h1>
+    </div>
+ 
+    <a href="#/">Return Home?</a>
+ 
+  </div>
+</div>
